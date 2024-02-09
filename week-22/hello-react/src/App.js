@@ -1,15 +1,22 @@
 import './App.css';
-
-const name = 'Nida';
-const surname = 'Onder Diril';
-const isLoggedIn = true;
+import User from './components/User'
 
 function App(){
   return (
     <>
-      <h1>
-        {isLoggedIn ? `Benim adim ${name} soyadim ${surname}` : `Giris yapmadiniz!`}
-      </h1>
+      <User 
+      name='Nida' 
+      surname='Onder Diril' 
+      age={28} 
+      // isLoggedIn = {true}
+      friends={['Ayse', 'Fatma', 'Mehmet']}
+      address={
+        {
+          title: 'Atasehir/Istanbul',
+          zip: 347555
+        }
+      } />
+      
     </>
   )
 };
